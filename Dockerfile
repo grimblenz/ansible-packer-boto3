@@ -3,6 +3,7 @@ MAINTAINER "Andrew Stockman <andrew.stockman@ihsmarkit.com>"
 
 ENV PACKER_VERSION=1.4.0
 ENV PACKER_SHA256SUM=7505e11ce05103f6c170c6d491efe3faea1fb49544db0278377160ffb72721e4
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update \
  && apt install -y openssl ssh unzip python-pip python-boto3 \
