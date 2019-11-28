@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update \
  && apt install -y openssl ssh unzip python-pip python-boto3 \
  && rm -rf /var/lib/apt/lists/* \
- && pip install ansible
+ && pip install ansible==2.7.15
 
 ADD https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip ./
 ADD https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_SHA256SUMS ./
